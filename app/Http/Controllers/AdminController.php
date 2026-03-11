@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
+use Inertia\Inertia;
 
 class AdminController extends Controller
 {
@@ -108,7 +109,7 @@ class AdminController extends Controller
 
         \Log::info('Dashboard data prepared - Books: ' . $booksCount . ', Members: ' . $membersCount . ', Daily: ' . $dailyCount . ', Weekly: ' . $weeklyCount);
 
-        return view('dashboard', [
+        return Inertia::render('dashboard', [
             'booksCount' => $booksCount,
             'membersCount' => $membersCount,
             'dailyCount' => $dailyCount,

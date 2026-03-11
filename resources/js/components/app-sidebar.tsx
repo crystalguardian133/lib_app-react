@@ -1,4 +1,4 @@
-rimport { Link } from '@inertiajs/react';
+import { Link } from '@inertiajs/react';
 import { Book, BookOpen, Clock, Folder, LayoutGrid, User } from 'lucide-react';
 import { NavFooter } from '@/components/nav-footer';
 import { NavMain } from '@/components/nav-main';
@@ -15,7 +15,9 @@ import {
 import type { NavItem } from '@/types';
 import AppLogo from './app-logo';
 import { books, dashboard, members, timeInOut } from '@/routes';
-        
+
+
+
 const mainNavItems: NavItem[] = [
     {
         title: 'Dashboard',
@@ -51,6 +53,8 @@ const footerNavItems: NavItem[] = [
         icon: BookOpen,
     },
 ];
+
+
 
 export function AppSidebar() {
     return (

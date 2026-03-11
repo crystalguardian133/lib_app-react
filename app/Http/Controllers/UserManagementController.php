@@ -22,7 +22,8 @@ class UserManagementController extends Controller
 
         // Search filter
         if ($request->has('search') && $request->search) {
-            $search = $request->search;
+            $sei
+arch = $request->search;
             $query->where(function ($q) use ($search) {
                 $q->where('name', 'like', "%{$search}%")
                   ->orWhere('email', 'like', "%{$search}%")
